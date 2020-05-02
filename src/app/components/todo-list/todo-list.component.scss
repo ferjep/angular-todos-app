@@ -1,0 +1,55 @@
+.todos-app-list {
+  width: 100%;
+  padding: 10px;
+
+  .no-todos {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    opacity: 0.5;
+    user-select: none;
+  }
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 5px 0;
+  margin-bottom: 10px;
+
+  span {
+    width: 80%;
+    word-wrap: break-word;
+    text-align: center;
+    &.completed {
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
+  }
+
+  .icon {
+    cursor: pointer;
+    margin: 0 10px;
+
+    &.uncompleted {
+      color: rgb(182, 182, 182);
+      &:hover {
+        color: var(--green);
+      }
+    }
+
+    &.completed {
+      color: var(--green);
+    }
+
+    &.trash {
+      font-size: 0.95rem;
+      color: rgb(182, 182, 182);
+      &:hover {
+        color: var(--red);
+      }
+    }
+  }
+}

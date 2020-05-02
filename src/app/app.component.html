@@ -1,0 +1,11 @@
+<div class="todos-app">
+  <app-todo-header [title]="title"></app-todo-header>
+  <div class="todos-app-wrapper">
+    <app-todo-add-form (onSubmit)="addTodo($event)"></app-todo-add-form>
+    <app-todo-list
+      (onComplete)="completeTodo($event)"
+      (onDelete)="deleteTodo($event)"
+      [todos]="todos"
+    ></app-todo-list>
+  </div>
+</div>

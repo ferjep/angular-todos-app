@@ -1,0 +1,9 @@
+<div class="todos-app-form">
+  <input
+    class="todos-form container"
+    type="text"
+    placeholder="Add todo"
+    [(ngModel)]="newTodoTitle"
+    (keyup.enter)="sendTodoTitle()"
+  />
+</div>

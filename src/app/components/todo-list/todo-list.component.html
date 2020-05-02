@@ -1,0 +1,28 @@
+<div class="todos-app-list container">
+  <ul>
+    <div *ngIf="todos[0] !== undefined; else noTodos">
+      <li *ngFor="let todo of todos" class="todo-item container">
+        <div (click)="onComplete.emit(todo.id)">
+          <fa-icon
+            class="icon completed"
+            [icon]="icon.completed"
+            *ngIf="todo.completed"
+          ></fa-icon>
+
+          <fa-icon
+            class="icon uncompleted"
+            [icon]="icon.uncompleted"
+            *ngIf="!todo.completed"
+          ></fa-icon>
+        </div>
+        <span [class.completed]="todo.completed">{{ todo.title }}</span>
+        <div class="icon trash" (click)="onDelete.emit(todo.id)">
+          <fa-icon [icon]="icon.trash"></fa-icon>
+        </div>
+      </li>
+    </div>
+    <ng-template #noTodos>
+      <span class="no-todos">Please add a todo</span>
+    </ng-template>
+  </ul>
+</div>

@@ -1,0 +1,17 @@
+.todos-app-header {
+  display: flex;
+  width: 100vw;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  background: var(--main);
+  margin-bottom: 1rem;
+
+  span {
+    color: var(--white);
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-left: 5px;
+  }
+}
